@@ -655,7 +655,7 @@ function renderHome(){
       }).join('')}
     </div>
     <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-faint);letter-spacing:.06em">v0.13-teste · Layout Bento · 4 camadas + Central de Produtos + SOPs</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-faint);letter-spacing:.06em">Layout Bento · 4 camadas + Central de Produtos + SOPs</div>
       <div style="display:flex;gap:8px">
         <button onclick="openAbout()" style="background:transparent;border:1px solid var(--border-2);color:var(--text-dim);padding:6px 14px;border-radius:8px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em">Sobre esta estrutura</button>
       </div>
@@ -696,7 +696,7 @@ function renderScope(){
     const items=collectAllItems(currentView);
     html+=renderScopeContent(currentView,items);
   }
-  html+=`<footer><span><span style="color:var(--text-dim)">v0.13-teste · Layout Bento</span> · Instituto Kronos</span><span><a onclick="openAbout()">Sobre esta estrutura</a> · <a onclick="confirmClearAll()">Zona perigosa</a></span></footer>`;
+  html+=`<footer><span><span style="color:var(--text-dim)">Layout Bento</span> · Instituto Kronos</span><span><a onclick="openAbout()">Sobre esta estrutura</a> · <a onclick="confirmClearAll()">Zona perigosa</a></span></footer>`;
   document.getElementById('view-content').innerHTML=html;
   document.querySelectorAll('.subtab').forEach(t=>{t.addEventListener('click',()=>{navigate(currentView,t.dataset.sub)})});
   document.querySelectorAll('[data-subnav]').forEach(el=>{el.addEventListener('click',e=>{e.preventDefault();navigate(currentView,el.dataset.subnav)})});
