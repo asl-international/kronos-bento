@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -340,263 +340,216 @@ footer a:hover{color:var(--red);border-bottom-color:var(--red)}
 
 <script>
 // === DATA (mesma de index-teste.html, com URLs placeholder pros docs locais) ===
-const ESTRUTURA={gestao:{titulo:'Gestão',eyebrow:'// GESTÃO',descricao:'O cérebro. A primeira tela que vocês olham todos os dias — indicadores, metas, planejamento.',items:[{id:'okrs',nome:'OKRs e metas'},{id:'dashboard',nome:'Dashboard geral'},{id:'kpis',nome:'KPIs'},{id:'financeiro',nome:'Financeiro'},{id:'fluxo-caixa',nome:'Fluxo de caixa'},{id:'planejamento-trimestral',nome:'Planejamento trimestral'},{id:'organograma',nome:'Organograma'},{id:'reunioes',nome:'Reuniões'},{id:'scorecard',nome:'Scorecard semanal'},{id:'track-record',nome:'Track record'},{id:'roadmap',nome:'Roadmap de projetos'}]},operacao:{titulo:'Operação',eyebrow:'// OPERAÇÃO',descricao:'Como a empresa funciona. Processos e execução por área funcional.',areas:{comercial:{titulo:'Comercial',items:[{id:'crm',nome:'CRM'},{id:'pipeline',nome:'Pipeline'},{id:'scripts',nome:'Scripts'},{id:'objecoes',nome:'Objeções'},{id:'contratos',nome:'Contratos'},{id:'diagnostico',nome:'Diagnóstico'},{id:'fechamento',nome:'Fechamento'}]},marketing:{titulo:'Marketing',items:[{id:'calendario',nome:'Calendário'},{id:'estrategia',nome:'Estratégia'},{id:'criativos',nome:'Criativos'},{id:'copy',nome:'Copy'},{id:'banco-anuncios',nome:'Banco de anúncios'},{id:'biblioteca-vsl',nome:'Biblioteca de VSL'},{id:'seo',nome:'SEO'},{id:'landing-pages',nome:'Landing Pages'}]},produto:{titulo:'Produto',items:[{id:'mentoria',nome:'Mentoria'},{id:'workshop',nome:'Workshop'},{id:'minicursos',nome:'Minicursos'},{id:'comunidade',nome:'Comunidade'},{id:'conteudo-aulas',nome:'Conteúdo das aulas'},{id:'atualizacoes',nome:'Atualizações'}]},cs:{titulo:'Sucesso do Cliente',items:[{id:'onboarding',nome:'Onboarding'},{id:'atendimento',nome:'Atendimento'},{id:'financeiro-cs',nome:'Financeiro'},{id:'cobranca',nome:'Cobrança'},{id:'suporte',nome:'Suporte'},{id:'nps',nome:'NPS'},{id:'comunidade-cs',nome:'Comunidade'},{id:'eventos',nome:'Eventos'}]},trafego:{titulo:'Tráfego',items:[{id:'meta',nome:'Meta'},{id:'google',nome:'Google'},{id:'tiktok',nome:'TikTok'},{id:'dashboards-trafego',nome:'Dashboards'},{id:'pixel',nome:'Pixel'},{id:'publicos',nome:'Públicos'},{id:'criativos-vencedores',nome:'Criativos vencedores'}]},financeiro:{titulo:'Financeiro',items:[{id:'receitas',nome:'Receitas'},{id:'custos',nome:'Custos'},{id:'pagamentos',nome:'Pagamentos'},{id:'comissao',nome:'Comissão'},{id:'relatorios',nome:'Relatórios'}]},rh:{titulo:'RH',items:[{id:'sops-rh',nome:'SOPs'},{id:'contratacoes',nome:'Contratações'},{id:'treinamentos',nome:'Treinamentos'},{id:'manual-cultura',nome:'Manual da cultura'}]}}},produtos:{titulo:'Produtos',eyebrow:'// PRODUTOS',descricao:'Tudo de cada oferta num lugar só.',items:{kairos:{titulo:'Mentoria Kairós',items:[{id:'produtos-negociacoes',nome:'Produtos e Negociações (Doc)'},{id:'lp-kairos',nome:'Landing Page'},{id:'oferta-kairos',nome:'Oferta'},{id:'criativos-kairos',nome:'Criativos'},{id:'produto-kairos',nome:'Produto'},{id:'dashboards-kairos',nome:'Dashboards'},{id:'pesquisa-kairos',nome:'Pesquisa'},{id:'financeiro-kairos',nome:'Financeiro'}]},workshop:{titulo:'Workshop Destrava Shopee',items:[{id:'dash-1',nome:'Dashboard 1'},{id:'dash-2',nome:'Dashboard 2'},{id:'dash-3',nome:'Dashboard 3'},{id:'assets-wds',nome:'Logo e Elementos'}]},eventos:{titulo:'Eventos Presenciais',items:[{id:'fotos-eventos',nome:'Fotos'}]},minicurso:{titulo:'Minicurso',items:[]},comunidade:{titulo:'Comunidade',items:[]}}},sops:{titulo:'Operações (SOPs)',eyebrow:'// SOPs',descricao:'Como fazer as coisas. Procedimentos passo-a-passo do time.',items:[{id:'sop-anuncio',nome:'Como subir um anúncio'},{id:'sop-campanha',nome:'Como criar uma campanha'},{id:'sop-workshop',nome:'Como lançar um workshop'},{id:'sop-carrinho',nome:'Como abrir carrinho'},{id:'sop-checkout',nome:'Como criar checkout'},{id:'sop-resposta',nome:'Como responder um aluno'},{id:'sop-boleto',nome:'Como gerar boleto'},{id:'sop-caixa',nome:'Como fechar caixa'},{id:'sop-onboarding',nome:'Como fazer onboarding'}]},biblioteca:{titulo:'Biblioteca',eyebrow:'// BIBLIOTECA',descricao:'Ativos para consulta. Brandbook, fotos, templates, jurídicos.',items:[{id:'logos',nome:'Logos'},{id:'brandbook',nome:'Brandbook'},{id:'fotos-ju',nome:'Fotos da Ju'},{id:'broll',nome:'Vídeos B-roll'},{id:'templates-canva',nome:'Templates Canva'},{id:'fontes',nome:'Fontes'},{id:'assets',nome:'Assets'},{id:'juridicos',nome:'Documentos jurídicos'},{id:'contratos',nome:'Contratos base'},{id:'certificados',nome:'Certificados'}]},conhecimento:{titulo:'Conhecimento',eyebrow:'// CONHECIMENTO',descricao:'Tudo que a empresa aprendeu. Segundo cérebro da operação.',items:[{id:'testes-anuncios',nome:'Testes de anúncios'},{id:'criativos-vencedores',nome:'Criativos vencedores'},{id:'headlines',nome:'Headlines vencedoras'},{id:'cpls',nome:'CPLs históricos'},{id:'benchmarks',nome:'Benchmarks'},{id:'aprendizados',nome:'Aprendizados de lançamentos'},{id:'relatorios',nome:'Relatórios pós-evento'},{id:'pesquisa',nome:'Pesquisa com alunos'},{id:'icp',nome:'ICP atualizado'},{id:'objecoes',nome:'Objeções novas'}]}};
-
-const PLAYBOOK={time:{titulo:'Time',conteudo:`Quem é quem na operação. Hoje a Ju revisa os grupos pra descobrir "o que é meu e o que não é" — esse é o gargalo nº 1, e ele se resolve com papéis fixos:
-
-Papel · Responsável · O que é dele(a)
-- CS / Customer Success · Roberta (Roh) · Acompanhamento da jornada, onboarding, lembretes, follow-up, triagem do WhatsApp, atualização do CRM, organização de demandas
-- Expert / Estratégia · Juliana · Aulas, oficinas ao vivo, análise estratégica das contas, decisões de método, sessões individuais de diagnóstico/escala
-- Contratos / Financeiro · Marina · Geração e conferência de contratos e assinaturas
-- Acessos / TI · Gabriel · Liberação de Drive, Zouti, plataformas
-
-REGRA DE OURO DA TRIAGEM DE WHATSAPP
-Dúvida operacional/acesso/prazo/"como faço" → CS resolve.
-Dúvida técnica recorrente → CS responde pelo material/FAQ.
-Decisão estratégica/análise de anúncio/método → CS encaminha à Ju em lote, não em tempo real.
-Nunca se responde fora do horário (09h–18h) — a descrição do grupo deixa isso explícito.`},'fase-0':{titulo:'Fase 0 — Onboarding (72h)',conteudo:`O QUE O CLIENTE VIVE
-Acabou de comprar, ansioso e inseguro. Esta fase gera a primeira sensação de "dessa vez é diferente, tem um time cuidando de mim".
-
-O QUE O TIME FAZ (passo a passo)
-1. Disparo imediato: e-mail de boas-vindas + WhatsApp via ManyChat
-2. Contrato: Marina gera, CS confere assinatura. Sem contrato assinado não avança.
-3. Liberação de acessos: Gabriel libera Zouti e Drive; CS confirma.
-4. Cadastro no CRM
-5. Entrada nos grupos
-6. Boas-vindas humana da CS
-7. Agendar o Diagnóstico de Margem (~10 dias)
-
-CHECKLIST DA CS
-- E-mail + WhatsApp automáticos dispararam
-- Contrato gerado e assinatura confirmada
-- Acessos liberados (Zouti + Drive) e confirmados pelo aluno
-- Aluno cadastrado no CRM
-- Adicionado ao grupo de WhatsApp
-- Adicionado ao Instagram privado
-- Mensagem de boas-vindas humana enviada
-- Áudio exclusivo da Ju enviado
-- Diagnóstico de Margem agendado`},'fase-1':{titulo:'Fase 1 — Diagnóstico e Ajuste de Margem',conteudo:`O QUE O CLIENTE VIVE
-Descobre onde está perdendo dinheiro. Mapeia produtos, calcula custos reais, define margem mínima e corrige a precificação. É a etapa que mais protege o aluno.
-
-ENTREGÁVEIS
-nº1 Aula de Diagnóstico de Margem · nº2 Planilha de Precificação Segura · nº3 Oficina de Correção · nº15 Diagnóstico Individual de Margem.
-
-SINAIS DE ALERTA
-Não preencheu a planilha · faltou ao diagnóstico · margem negativa nos produtos principais.
-
-🚨 CRITÉRIO DE AVANÇO
-Planilha preenchida ✓ · precificação corrigida ✓ · margem mínima definida por produto ✓.
-Aluno com erro grave de margem NÃO avança — é o principal risco do negócio.
-
-SCRIPTS: 4 (planilha), 5 (lembrete segunda), 6 (véspera), 7 (margem negativa).`},'fase-2':{titulo:'Fase 2 — Estruturação da Loja e Oferta',conteudo:`O QUE O CLIENTE VIVE
-Escolhe os produtos certos para escalar, melhora anúncios, cria ofertas competitivas sem destruir margem.
-
-ENTREGÁVEIS
-nº4 Aula de Seleção de Produtos Vencedores · nº5 Checklist de Otimização de Anúncios · nº6 Oficina de Anúncios e Ofertas (mensal).
-
-SINAIS DE ALERTA
-Não definiu produtos prioritários · anúncios sem otimização · sumiu das oficinas.
-
-CRITÉRIO DE AVANÇO
-Produtos vencedores selecionados ✓ · anúncios otimizados ✓ · ofertas/kits estruturados ✓
-
-SCRIPTS: 8 (checklist), 9 (follow-up).`},'fase-3':{titulo:'Fase 3 — Crescimento de Pedidos com Controle',conteudo:`O QUE O CLIENTE VIVE
-Escala com controle — datas Shopee com margem protegida, anúncios pagos com ROAS controlado.
-
-ENTREGÁVEIS
-nº7 Aula de Campanhas com Margem Protegida · nº8 Painel de Indicadores · nº9 Encontro de Análise (quinzenal) · nº10 Aula de ROAS · nº11 Plantão de Dúvidas.
-
-SINAIS DE ALERTA
-Painel desatualizado · sumiço dos encontros quinzenais · anúncio sem controle de retorno.
-
-CRITÉRIO DE AVANÇO
-Painel em uso semanal ✓ · campanhas com margem protegida ✓ · ROAS acompanhado ✓
-
-SCRIPTS: 10 (painel), 11 (cobrança), 12 (convite encontro), 13 (resgate).`},'fase-4':{titulo:'Fase 4 — Escala',conteudo:`O QUE O CLIENTE VIVE
-Escala os produtos lucrativos, padroniza operação, expande catálogo. Chega ao destino: R$50 mil/mês com margem.
-
-ENTREGÁVEIS
-nº12 Aula de Operação para Alto Volume · nº13 Playbook Operacional da Loja · nº14 Oficina de Plano de Escala · nº16 Revisão Individual do Plano de Escala.
-
-SINAIS DE ALERTA
-Não estruturou plano de escala · operação não padronizada · faturamento estagnado.
-
-SCRIPTS: 14 (revisão do plano).`},'fase-5':{titulo:'Fase 5 — Encerramento e Retenção',conteudo:`O QUE O CLIENTE VIVE
-Chega ao fim do programa com (idealmente) resultado e quer continuar perto.
-
-O QUE O TIME FAZ
-- CS coleta resultado final e depoimento (prova social)
-- CS verifica elegibilidade da garantia condicional
-- CS oferece o próximo passo (renovação, Aceleradora, Mesa do Conselho)
-- Registra o "porquê saiu" de quem não renova
-
-SCRIPTS: 15 (depoimento), 16 (pesquisa de saída), 17 (próximo passo).`},rotina:{titulo:'Rotina operacional do time',conteudo:`DIÁRIO (CS): Triagem do WhatsApp 9h–18h + atualizar CRM
-SEMANAL (CS): Varredura de "alunos sumidos" + follow-up
-QUINZENAL (time + Ju, 09h): Reunião de equipe — status por fase
-MENSAL: Revisão de retenção e resultados`},regua:{titulo:'Régua de saúde do aluno',conteudo:`🟢 ATIVO — participa, atualiza painel, executa
-🟡 ATENÇÃO — faltou 1 encontro ou atrasado na execução
-🔴 RISCO — sumiu há 2+ semanas, painel parado
-
-Ação preferida: ligar (não só mensagem).`},scripts:{titulo:'Biblioteca de Scripts (1 a 19)',conteudo:`Scripts completos de WhatsApp para cada momento da jornada.
-1. Boas-vindas humanas (privado, até 24h)
-2. Confirmação de acessos
-3. Agendamento do Diagnóstico de Margem
-4. Entrega da planilha de precificação
-5. Lembrete de sessão individual (segunda)
-6. Lembrete véspera
-7. Aluno com margem negativa (acolhimento)
-8. Entrega do checklist de anúncios
-9. Follow-up de execução
-10. Entrega do Painel de Indicadores
-11. Cobrança de atualização do painel (semanal)
-12. Convite encontro quinzenal de indicadores
-13. Resgate de aluno que parou de atualizar
-14. Lembrete da Revisão do Plano de Escala
-15. Coleta de depoimento
-16. Pesquisa de saída
-17. Oferta de próximo passo
-18. Resposta fora do horário
-19. Encaminhamento ao expert (transparência)
-
-_Conteúdo completo de cada script está no PDF original (localizado no PC da Ju)._`}};
-
-const INITIAL_DATA={
-  'gestao':{
-    'time':{id:'time',nome:'Time',type:'note',note:`Quem faz o quê no Instituto Kronos.
-
-Ju (Juliana Magalhães) — Expert / Estratégia · aulas, oficinas, análise estratégica, sessões individuais.
-Roberta (Roh) — Assessora · onboarding, lembretes, follow-up, triagem WhatsApp, CRM.
-Marina — Contratos / Financeiro · contratos e assinaturas.
-Gabriel — Acessos / TI · Drive, Zouti, plataformas.
-
-PRÓXIMOS PASSOS
-- Plano de backup por papel (se Roberta sair, quem assume?)`},
-    'track-record':{id:'track-record',nome:'Track record',type:'note',note:`"Track record faltou. Eu fiquei chocada."
-
-O QUE É
-Histórico de cases, resultados e números. Prova social estruturada.
-
-PRA QUE SERVE
-- Vendas: argumento de fechamento
-- Social proof: criativos e landing pages
-- Memória institucional: "vocês já fizeram isso?"
-- Auto-confiança do time
-
-O QUE COLOCAR AQUI
-- Cases de alunos com números (faturamento antes/depois, margem recuperada)
-- Cases de workshops (comparecimento, conversão, NPS)
-- Cases de mentoria com evidência
-- Marcas/projetos atendidos
-- Resultados por período
-
-FORMATO SUGERIDO
-- Quem era (perfil, dor)
-- O que foi feito
-- Resultado com número
-- Tempo até o resultado
-- Depoimento
-
-PRÓXIMOS PASSOS
-- Levantar cases existentes com a Ju e a Roberta
-- Definir template padrão
-- Coletar números reais`}
+const ESTRUTURA = {
+  gestao: {
+    titulo: 'Gestão', eyebrow: '// GESTÃO',
+    descricao: 'O cérebro. A primeira tela que vocês olham todos os dias — indicadores, metas, planejamento.',
+    items: [
+      { id: 'okrs', nome: 'OKRs e metas' },
+      { id: 'dashboard', nome: 'Dashboard geral' },
+      { id: 'kpis', nome: 'KPIs' },
+      { id: 'financeiro', nome: 'Financeiro' },
+      { id: 'fluxo-caixa', nome: 'Fluxo de caixa' },
+      { id: 'planejamento-trimestral', nome: 'Planejamento trimestral' },
+      { id: 'organograma', nome: 'Organograma' },
+      { id: 'reunioes', nome: 'Reuniões' },
+      { id: 'scorecard', nome: 'Scorecard semanal' },
+      { id: 'roadmap', nome: 'Roadmap de projetos' }
+    ]
   },
-  'operacao.comercial':{
-    'agendamento-1-1':{id:'agendamento-1-1',nome:'Agendamento 1:1',type:'section',desc:'Funil de aplicação → sessão 1:1',items:{
-      'planilha-base':{id:'planilha-base',nome:'Planilha de agendamento',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1RbjhTOEqb4HWDAXNwAi_jG67gZBkCecE78fngLsTvVY/edit?gid=1085045508',desc:'Base de leads e reuniões marcadas'},
-      'aplicacao-respostas':{id:'aplicacao-respostas',nome:'Formulário de aplicação (respostas)',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1Gqdlrr7XULWMZlzXqVhktsJ2FEfOrObgBaT_vmBD3Go/edit?gid=187719667',desc:'Quem se inscreveu pra entrar na mentoria'},
-      'pre-analise-respostas':{id:'pre-analise-respostas',nome:'Pré-análise estratégica (respostas)',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1LJsQ4iUB6YmSsMHeXjzYUgvwGazIfwN3hkZMRtSByyE/edit?gid=740688844',desc:'Convite para sessão 1:1'},
-      'analise-contas-respostas':{id:'analise-contas-respostas',nome:'Análise de contas (respostas)',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1N_T5FYd_bhX2tpdsLCDZ9QPsbWSf8izqN6iWllKjCq8/edit?gid=654550711',desc:'Análise de contas do lead'},
-      'roteiros-sessao':{id:'roteiros-sessao',nome:'Roteiros de sessão (Docs)',type:'section',desc:'Scripts que o time comercial usa. Local: C:\\Users\\bueno\\Downloads\\Documentos\\',items:{
-        'roteiro-ja-vende':{id:'roteiro-ja-vende',nome:'Roteiro — Quem já vende (v3)',type:'doc',desc:'8 blocos + check-list pós-sessão. TODO: substituir pelo link do Drive após upload.'},
-        'roteiro-nao-vende':{id:'roteiro-nao-vende',nome:'Roteiro — Quem não vende (v3)',type:'doc',desc:'8 blocos + perguntas excludentes + objeções comuns. TODO: substituir.'},
-        'roteiro-fechamento':{id:'roteiro-fechamento',nome:'Roteiro — Fechamento (v2)',type:'doc',desc:'5 blocos + objeções + dúvidas frequentes. TODO: substituir.'},
-        'kairos-central':{id:'kairos-central',nome:'Kairós Central — App de Roteiros (HTML)',type:'link',url:'http://127.0.0.1:8773/downloads/kairos%20central/index.html',desc:'App interativo local'}
-      }}
-    }},
-    'captacao':{id:'captacao',nome:'Captação',type:'section',desc:'Pontos de entrada de leads',items:{
-      'pre-diagnostico-pagina':{id:'pre-diagnostico-pagina',nome:'Página de pré-diagnóstico',type:'link',url:'https://int-kronos.pages.dev/',desc:'Landing page'},
-      'pre-diagnostico-form':{id:'pre-diagnostico-form',nome:'Formulário de pré-diagnóstico',type:'link',url:'https://forms.gle/qUMrv7mXbPoD4Ytd6'},
-      'live-quinta':{id:'live-quinta',nome:'Live de quinta-feira',type:'link',url:'https://paginas.institutokronos.com.br/live-quinta',desc:'Página da live semanal'},
-      'avatar-kairos':{id:'avatar-kairos',nome:'Avatar Kairós — quem qualifica (Doc)',type:'doc',desc:'Framework de qualificação. 3 gates obrigatórios + scoring + ICP premium (fabricante). TODO: substituir pelo link do Drive após upload.'},
-      'origem-leads':{id:'origem-leads',nome:'Origem dos leads (métrica)',type:'note',note:`Esses dados precisam estar VISÍVEIS no dia a dia:
-- Workshop / sessão 1:1 / live / direct / link da bio
-- Métrica vai morar na planilha de captação. TODO: criar dashboard por origem.`}
-    }},
-    'aplicacao':{id:'aplicacao',nome:'Aplicação (só evento)',type:'section',desc:'Aplicação APENAS pra evento. Pra mentoria, vai direto pra oferta.',items:{
-      'aplicacao-decisao':{id:'aplicacao-decisao',nome:'Por que só pra evento',type:'note',note:`TIRAR a aplicação da mentoria. Aplicação na mentoria gera leads quentes que DESISTEM no meio. Pra mentoria, ir direto pra oferta (R$ 12k ancorado em R$ 15k).`},
-      'aplicacao-form-evento':{id:'aplicacao-form-evento',nome:'Formulário de aplicação (evento)',type:'link',url:'https://forms.gle/qUMrv7mXbPoD4Ytd6'}
-    }},
-    'checkouts':{id:'checkouts',nome:'Checkouts de pagamento',type:'section',desc:'Links de pagamento — em migração de Zouti para Asas',items:{
-      'aplicacao-zouti':{id:'aplicacao-zouti',nome:'Aplicação/entrada (Zouti)',type:'link',url:'https://pay.zouti.com.br/checkout?poi=prod_offer_m86w42a1nayucugvh29ws0'},
-      'a-vista':{id:'a-vista',nome:'À vista (Zouti)',type:'link',url:'https://pay.zouti.com.br/checkout?product_offer_id=prod_offer_7bs0a37hyb3s6qq2b3ka6o'},
-      'parcelado':{id:'parcelado',nome:'Parcelado (Zouti)',type:'link',url:'https://pay.zouti.com.br/checkout?product_offer_id=prod_offer_cl7z0m6oaz6axusj4u5jqv'},
-      'contrato-kairos':{id:'contrato-kairos',nome:'Contrato Mentoria Kairós (PDF)',type:'doc',url:'https://drive.google.com/file/d/1q_0e-iJt4_NIueOv-Ie2hxzB4DbOX7yz/view?usp=sharing',desc:'12 meses · R$10k à vista / R$12k parcelado · Garantia condicional. TODO: substituir pelo link do Drive após upload.'},
-      'migracao-asas':{id:'migracao-asas',nome:'Migração pra Asas',type:'note',note:`Decisão: migrar de Zouti para Asas.
-- 3,99% + R$ 0,50/transação parcelada
-- SEM antecipação compulsória
-- Boleto: R$ 1,99 FIXO · PIX: R$ 1,99
-- Aplicação e ingressos PERMANECEM na Zouti
-- TODO: gerar links definitivos Asas`}
-    }},
-    'produtos-negociacao':{id:'produtos-negociacao',nome:'Produtos e negociação',type:'doc',url:'https://docs.google.com/document/d/1D2PB3mtDoua4-iXL2wQ2ONzr4RPPphiU/edit',desc:'Doc de precificação e regras de oferta'}
+  operacao: {
+    titulo: 'Operação', eyebrow: '// OPERAÇÃO',
+    descricao: 'Como a empresa funciona. Processos e execução por área funcional.',
+    areas: {
+      comercial: { titulo: 'Comercial', items: [
+        { id: 'crm', nome: 'CRM' }, { id: 'pipeline', nome: 'Pipeline' },
+        { id: 'scripts', nome: 'Scripts' }, { id: 'objecoes', nome: 'Objeções' },
+        { id: 'contratos', nome: 'Contratos' }, { id: 'diagnostico', nome: 'Diagnóstico' },
+        { id: 'fechamento', nome: 'Fechamento' }
+      ] },
+      marketing: { titulo: 'Marketing', items: [
+        { id: 'calendario', nome: 'Calendário' }, { id: 'estrategia', nome: 'Estratégia' },
+        { id: 'criativos', nome: 'Criativos' }, { id: 'copy', nome: 'Copy' },
+        { id: 'banco-anuncios', nome: 'Banco de anúncios' },
+        { id: 'biblioteca-vsl', nome: 'Biblioteca de VSL' },
+        { id: 'seo', nome: 'SEO' }, { id: 'landing-pages', nome: 'Landing Pages' }
+      ] },
+      produto: { titulo: 'Produto', items: [
+        { id: 'mentoria', nome: 'Mentoria' }, { id: 'workshop', nome: 'Workshop' },
+        { id: 'minicursos', nome: 'Minicursos' }, { id: 'comunidade', nome: 'Comunidade' },
+        { id: 'conteudo-aulas', nome: 'Conteúdo das aulas' },
+        { id: 'atualizacoes', nome: 'Atualizações' }
+      ] },
+      cs: { titulo: 'Sucesso do Cliente', items: [
+        { id: 'onboarding', nome: 'Onboarding' }, { id: 'atendimento', nome: 'Atendimento' },
+        { id: 'financeiro-cs', nome: 'Financeiro' }, { id: 'cobranca', nome: 'Cobrança' },
+        { id: 'suporte', nome: 'Suporte' }, { id: 'nps', nome: 'NPS' },
+        { id: 'comunidade-cs', nome: 'Comunidade' }, { id: 'eventos', nome: 'Eventos' }
+      ] },
+      trafego: { titulo: 'Tráfego', items: [
+        { id: 'meta', nome: 'Meta' }, { id: 'google', nome: 'Google' },
+        { id: 'tiktok', nome: 'TikTok' }, { id: 'dashboards-trafego', nome: 'Dashboards' },
+        { id: 'pixel', nome: 'Pixel' }, { id: 'publicos', nome: 'Públicos' },
+        { id: 'criativos-vencedores', nome: 'Criativos vencedores' }
+      ] },
+      financeiro: { titulo: 'Financeiro', items: [
+        { id: 'receitas', nome: 'Receitas' }, { id: 'custos', nome: 'Custos' },
+        { id: 'pagamentos', nome: 'Pagamentos' }, { id: 'comissao', nome: 'Comissão' },
+        { id: 'relatorios', nome: 'Relatórios' }
+      ] },
+      rh: { titulo: 'RH', items: [
+        { id: 'sops-rh', nome: 'SOPs' }, { id: 'contratacoes', nome: 'Contratações' },
+        { id: 'treinamentos', nome: 'Treinamentos' }, { id: 'manual-cultura', nome: 'Manual da cultura' }
+      ] }
+    }
   },
-  'operacao.marketing':{
-    'pesquisa-mercado':{id:'pesquisa-mercado',nome:'Pesquisa de mercado',type:'section',desc:'Raio X do avatar',items:{
-      'raio-x-vende':{id:'raio-x-vende',nome:'Raio X – quem já vende',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1nmfC4n7PVmOrPQfMgfqQpjwDIZT93wN3wETQ21yTXYY/edit?gid=1502063929'},
-      'raio-x-nao-vende':{id:'raio-x-nao-vende',nome:'Raio X – quem não vende',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1oYlderDAgK4MKWHXC9iak44BN_NNbZhCzTw5bqY8G-0/edit?gid=1502063929'}
-    }},
-    'roteiros':{id:'roteiros',nome:'Roteiros Kairós',type:'link',url:'http://127.0.0.1:8773/downloads/kairos%20central/index.html',desc:'App de roteiros (local)'},
-    'criativos':{id:'criativos',nome:'Criativos — materiais de divulgação',type:'note',note:'Banco de criativos e materiais de divulgação.\n\nMateriais de divulgação da mentoria:\nhttps://drive.google.com/drive/folders/1TUsyPpPdqeZ-lZ3r6URuW28pjJilPTjs',desc:'Pasta do Drive com criativos da mentoria'},
-    'copy':{id:'copy',nome:'Copy — textos-base',type:'note',note:'Scripts e textos-base das comunicações.\n\nRoteiros de criativos:\nhttps://docs.google.com/document/d/1vwV6hosq4veo5k96AO0OxUwPNBfChqs_DGYKo1hGQvY',desc:'Roteiros de copy e textos de criativos'}
+  produtos: {
+    titulo: 'Produtos', eyebrow: '// PRODUTOS',
+    descricao: 'Tudo de cada oferta num lugar só.',
+    items: {
+      kairos: { titulo: 'Mentoria Kairós', items: [
+        { id: 'lp-kairos', nome: 'Landing Page' }, { id: 'oferta-kairos', nome: 'Oferta' },
+        { id: 'criativos-kairos', nome: 'Criativos' }, { id: 'produto-kairos', nome: 'Produto' },
+        { id: 'dashboards-kairos', nome: 'Dashboards' }, { id: 'pesquisa-kairos', nome: 'Pesquisa' },
+        { id: 'financeiro-kairos', nome: 'Financeiro' }
+      ] },
+      workshop: { titulo: 'Workshop Destrava Shopee', items: [
+        { id: 'dash-1', nome: 'Dashboard 1' }, { id: 'dash-2', nome: 'Dashboard 2' },
+        { id: 'dash-3', nome: 'Dashboard 3' }, { id: 'assets-wds', nome: 'Logo e Elementos' }
+      ] },
+      eventos: { titulo: 'Eventos Presenciais', items: [
+        { id: 'fotos-eventos', nome: 'Fotos' }
+      ] },
+      minicurso: { titulo: 'Minicurso', items: [] },
+      comunidade: { titulo: 'Comunidade', items: [] }
+    }
   },
-  'operacao.financeiro':{
-    'financeiro-2-niveis':{id:'financeiro-2-niveis',nome:'Financeiro em 2 níveis (geral + individual)',type:'note',note:`O financeiro precisa ter 2 visões.
+  sops: {
+    titulo: 'SOPs', eyebrow: '// SOPs',
+    descricao: 'Como fazer as coisas. Procedimentos passo-a-passo do time.',
+    items: [
+      { id: 'sop-anuncio', nome: 'Como subir um anúncio' },
+      { id: 'sop-campanha', nome: 'Como criar uma campanha' },
+      { id: 'sop-workshop', nome: 'Como lançar um workshop' },
+      { id: 'sop-carrinho', nome: 'Como abrir carrinho' },
+      { id: 'sop-checkout', nome: 'Como criar checkout' },
+      { id: 'sop-resposta', nome: 'Como responder um aluno' },
+      { id: 'sop-boleto', nome: 'Como gerar boleto' },
+      { id: 'sop-caixa', nome: 'Como fechar caixa' },
+      { id: 'sop-onboarding', nome: 'Como fazer onboarding' }
+    ]
+  },
+  biblioteca: {
+    titulo: 'Biblioteca', eyebrow: '// BIBLIOTECA',
+    descricao: 'Ativos para consulta. Brandbook, fotos, templates, jurídicos.',
+    items: [
+      { id: 'logos', nome: 'Logos' }, { id: 'brandbook', nome: 'Brandbook' },
+      { id: 'fotos-ju', nome: 'Fotos da Ju' }, { id: 'broll', nome: 'Vídeos B-roll' },
+      { id: 'templates-canva', nome: 'Templates Canva' },
+      { id: 'fontes', nome: 'Fontes' }, { id: 'assets', nome: 'Assets' },
+      { id: 'juridicos', nome: 'Documentos jurídicos' },
+      { id: 'contratos', nome: 'Contratos base' },
+      { id: 'certificados', nome: 'Certificados' }
+    ]
+  },
+  conhecimento: {
+    titulo: 'Conhecimento', eyebrow: '// CONHECIMENTO',
+    descricao: 'Tudo que a empresa aprendeu. Segundo cérebro da operação.',
+    items: [
+      { id: 'testes-anuncios', nome: 'Testes de anúncios' },
+      { id: 'criativos-vencedores', nome: 'Criativos vencedores' },
+      { id: 'headlines', nome: 'Headlines vencedoras' },
+      { id: 'cpls', nome: 'CPLs históricos' },
+      { id: 'benchmarks', nome: 'Benchmarks' },
+      { id: 'aprendizados', nome: 'Aprendizados de lançamentos' },
+      { id: 'relatorios', nome: 'Relatórios pós-evento' },
+      { id: 'pesquisa', nome: 'Pesquisa com alunos' },
+      { id: 'icp', nome: 'ICP atualizado' },
+      { id: 'objecoes', nome: 'Objeções novas' }
+    ]
+  }
+};
 
-VISÃO 1 — FINANCEIRO GERAL
-- Tudo que entra, tudo que sai
-- Composição consolidada (mentoria, workshops, eventos, comunidade)
-- Receitas, custos, comissão, relatórios
-
-VISÃO 2 — FINANCEIRO INDIVIDUAL
-- Workshop 1, 2, 3 (cada um separado)
-- Sessão 1:1 individuais
-- Mentorias individuais
-- Ficha de participação financeira por aluno`}
+const INITIAL_DATA = {
+  'gestao': {},
+  'operacao.financeiro': {},
+  'operacao.cs': {
+    'acompanhamento': { id: 'acompanhamento', nome: 'Acompanhamento de mentorados', type: 'sheet',
+      url: 'https://docs.google.com/spreadsheets/d/1MCgMng4h_Luft7Jvzc1G_yrGAMCzuxqlUmT0Wmi95kY/edit?gid=1831693487',
+      desc: 'Planilha geral de acompanhamento'
+    }
   },
-  'operacao.cs':{
-    'acompanhamento':{id:'acompanhamento',nome:'Acompanhamento de mentorados',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1MCgMng4h_Luft7Jvzc1G_yrGAMCzuxqlUmT0Wmi95kY/edit?gid=1831693487',desc:'Planilha geral de acompanhamento'},
-    'regua-saude':{id:'regua-saude',nome:'Régua de saúde do aluno',type:'note',note:`🟢 ATIVO · 🟡 ATENÇÃO · 🔴 RISCO
-Ação preferida: LIGAR (não só mensagem).`},},
-  'produtos.kairos':{
-    'manual-participante':{id:'manual-participante',nome:'Manual do participante',type:'link',url:'https://mentoriakairos.institutokronos.com.br/manualdoparticipante',desc:'Página do manual'},
-    'avatar-kairos':{id:'avatar-kairos',nome:'Avatar Kairós',type:'doc',url:'https://docs.google.com/document/d/1sa6zjkL-FAwaycnCl49Qm4TC-06IWe2L/edit',desc:'ICP e persona'},
-    'produtos-negociacoes':{id:'produtos-negociacoes',nome:'Produtos e Negociações (Doc)',type:'doc',desc:'Tabela de preços, 4 Pilares, 13 entregáveis detalhados, política de migração. TODO: substituir pelo link do Drive.'}
+  'produtos.kairos': {
+    'manual-participante': { id: 'manual-participante', nome: 'Manual do participante', type: 'link',
+      url: 'https://mentoriakairos.institutokronos.com.br/manualdoparticipante',
+      desc: 'Página do manual'
+    },
+    'avatar-kairos': { id: 'avatar-kairos', nome: 'Avatar Kairós', type: 'doc',
+      url: 'https://docs.google.com/document/d/1sa6zjkL-FAawaycnCl49Qm4TC-06IWe2L/edit',
+      desc: 'ICP e persona'
+    },
+    'produtos-negociacoes': { id: 'produtos-negociacoes', nome: 'Produtos e Negociações (Doc)', type: 'doc',
+      desc: 'Tabela de preços completa, 4 Pilares, 13 entregáveis, política de migração. PDF local: C:\\Users\\bueno\\Downloads\\Documentos\\Produtos e negociações.docx'
+    }
   },
-  'produtos.workshop':{
-    'dash-1':{id:'dash-1',nome:'Dashboard 1',type:'section',desc:'Looker + base de dados',items:{
-      'dash-1-link':{id:'dash-1-link',nome:'Dashboard (Looker)',type:'link',url:'https://datastudio.google.com/u/0/reporting/c8b52ebf-3ece-4410-9536-bc9326b822e1/page/XzPOF'},
-      'dash-1-base':{id:'dash-1-base',nome:'Base de dados',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1pvq7dyGxUFMKD4MjCpFPEiTPDKOSQoJi4MQ3yVCG8oo/edit?gid=1800336546'}
-    }},
-    'dash-2':{id:'dash-2',nome:'Dashboard 2',type:'section',desc:'Looker + base de dados',items:{
-      'dash-2-link':{id:'dash-2-link',nome:'Dashboard (Looker)',type:'link',url:'https://datastudio.google.com/u/0/reporting/4451fdca-2f27-48ed-8a8e-51023f971a0b/page/XzPOF'},
-      'dash-2-base':{id:'dash-2-base',nome:'Base de dados',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1fCd4GwIS533SF_q4hJ13mgp35Xrjs6q0O7kmTzkj6X8/edit?gid=1203233720'}
-    }},
-    'dash-3':{id:'dash-3',nome:'Dashboard 3',type:'section',desc:'Looker + base de dados',items:{
-      'dash-3-link':{id:'dash-3-link',nome:'Dashboard (Looker)',type:'link',url:'https://datastudio.google.com/u/0/reporting/3691b40a-7d87-4869-a789-9239385fe3bc/page/XzPOF'},
-      'dash-3-base':{id:'dash-3-base',nome:'Base de dados',type:'sheet',url:'https://docs.google.com/spreadsheets/d/1bdLRphRFvpJmkrnTqdKORhpP9h24hlFRzvm6n6mUNlo/edit?gid=1203233720'}
-    }},
-    'assets-wds':{id:'assets-wds',nome:'Logo e Elementos',type:'section',desc:'Assets visuais do Workshop',items:{
-      'logo-wds':{id:'logo-wds',nome:'Logo WDS e Elementos das páginas',type:'link',url:'https://drive.google.com/drive/folders/1sA_rdXIqNIZVHYEOXzOOnEzMUv7Quq1P?usp=drive_link'},
-      'elementos-paginas':{id:'elementos-paginas',nome:'Elementos das páginas (Drive)',type:'link',url:'https://drive.google.com/drive/folders/16zEJaWCrMPf9Y-T4Gu8_uU9Qb-zUs3Cf?usp=drive_link'}
-    }}
+  'produtos.workshop': {
+    'dash-1': { id: 'dash-1', nome: 'Dashboard 1', type: 'section', desc: 'Looker + base de dados', items: {
+      'dash-1-link': { id: 'dash-1-link', nome: 'Dashboard (Looker)', type: 'link', url: 'https://datastudio.google.com/u/0/reporting/c8b52ebf-3ece-4410-9536-bc9326b822e1/page/XzPOF' },
+      'dash-1-base': { id: 'dash-1-base', nome: 'Base de dados', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1pvq7dyGxUFMKD4MjCpFPEiTPDKOSQoJi4MQ3yVCG8oo/edit?gid=1800336546' }
+    } },
+    'dash-2': { id: 'dash-2', nome: 'Dashboard 2', type: 'section', desc: 'Looker + base de dados', items: {
+      'dash-2-link': { id: 'dash-2-link', nome: 'Dashboard (Looker)', type: 'link', url: 'https://datastudio.google.com/u/0/reporting/4451fdca-2f27-48ed-8a8e-51023f971a0b/page/XzPOF' },
+      'dash-2-base': { id: 'dash-2-base', nome: 'Base de dados', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1fCd4GwIS533SF_q4hJ13mgp35Xrjs6q0O7kmTzkj6X8/edit?gid=1203233720' }
+    } },
+    'dash-3': { id: 'dash-3', nome: 'Dashboard 3', type: 'section', desc: 'Looker + base de dados', items: {
+      'dash-3-link': { id: 'dash-3-link', nome: 'Dashboard (Looker)', type: 'link', url: 'https://datastudio.google.com/u/0/reporting/3691b40a-7d87-4869-a789-9239385fe3bc/page/XzPOF' },
+      'dash-3-base': { id: 'dash-3-base', nome: 'Base de dados', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1bdLRphRFvpJmkrnTqdKORhpP9h24hlFRzvm6n6mUNlo/edit?gid=1203233720' }
+    } },
+    'assets-wds': { id: 'assets-wds', nome: 'Logo e Elementos', type: 'section', desc: 'Assets visuais do Workshop', items: {
+      'logo-wds': { id: 'logo-wds', nome: 'Logo WDS e Elementos', type: 'link', url: 'https://drive.google.com/drive/folders/1sA_rdXIqNIZVHYEOXzOOnEzMUv7Quq1P?usp=drive_link' },
+      'elementos-paginas': { id: 'elementos-paginas', nome: 'Elementos das páginas', type: 'link', url: 'https://drive.google.com/drive/folders/16zEJaWCrMPf9Y-T4Gu8_uU9Qb-zUs3Cf?usp=drive_link' }
+    } }
   },
-  'produtos.eventos':{
-    'fotos-eventos':{id:'fotos-eventos',nome:'Fotos evento Planejando 2026',type:'link',url:'https://drive.google.com/drive/folders/17oLJwDqKMyU9a-nVWn1_CLXF2MZ0nBj4'}
+  'produtos.eventos': { 'fotos-eventos': { id: 'fotos-eventos', nome: 'Fotos evento Planejando 2026', type: 'link', url: 'https://drive.google.com/drive/folders/17oLJwDqKMyU9a-nVWn1_CLXF2MZ0nBj4' } },
+  'biblioteca.fotos-ju': { 'galeria-1': { id: 'galeria-1', nome: 'Galeria 1 — Fotos da Ju', type: 'link', url: 'https://amarifoto.exposure.com.br/juliana' }, 'galeria-2': { id: 'galeria-2', nome: 'Galeria 2 — Fotos da Ju', type: 'link', url: 'https://amarifoto.exposure.com.br/juliana1' } },
+  'operacao.comercial': {
+    'agendamento-1-1': { id: 'agendamento-1-1', nome: 'Agendamento 1:1', type: 'section', desc: 'Funil de aplicação → sessão 1:1', items: {
+      'planilha-base': { id: 'planilha-base', nome: 'Planilha de agendamento', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1RbjhTOEqb4HWDAXNwAi_jG67gZBkCecE78fngLsTvVY/edit?gid=1085045508', desc: 'Base de leads e reuniões marcadas' },
+      'aplicacao-respostas': { id: 'aplicacao-respostas', nome: 'Formulário de aplicação (respostas)', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1Gqdlrr7XULWMZlzXqVhktsJ2FEfOrObgBaT_vmBD3Go/edit?gid=187719667', desc: 'Quem se inscreveu pra entrar na mentoria' },
+      'pre-analise-respostas': { id: 'pre-analise-respostas', nome: 'Pré-análise estratégica (respostas)', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1LJsQ4iUB6YmSsMHeXjzYUgvwGazIfwN3hkZMRtSByyE/edit?gid=740688844', desc: 'Convite para sessão 1:1' },
+      'analise-contas-respostas': { id: 'analise-contas-respostas', nome: 'Análise de contas (respostas)', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1N_T5FYd_bhX2tpdsLCDZ9QPsbWSf8izqN6iWllKjCq8/edit?gid=654550711', desc: 'Análise de contas do lead' },
+      'roteiros-sessao': { id: 'roteiros-sessao', nome: 'Roteiros de sessão (vários Docs)', type: 'section', desc: 'Scripts do time comercial. 7+ versões em C:\\Users\\bueno\\Downloads\\Documentos\\', items: {
+        'roteiro-ja-vende': { id: 'roteiro-ja-vende', nome: 'Roteiro — Quem já vende (v3)', type: 'doc', desc: '8 blocos + check-list pós-sessão. Links de pagamento embutidos.' },
+        'roteiro-nao-vende': { id: 'roteiro-nao-vende', nome: 'Roteiro — Quem não vende (v3)', type: 'doc', desc: '8 blocos + perguntas excludentes + objeções comuns.' },
+        'roteiro-fechamento': { id: 'roteiro-fechamento', nome: 'Roteiro — Fechamento (v2)', type: 'doc', desc: '5 blocos + objeções + dúvidas frequentes. Pós-aplicação paga.' },
+        'kairos-central': { id: 'kairos-central', nome: 'Kairós Central — App de Roteiros', type: 'link', url: 'http://127.0.0.1:8773/downloads/kairos%20central/index.html', desc: 'App interativo com todos os roteiros' }
+      } }
+    } },
+    'captacao': { id: 'captacao', nome: 'Captação', type: 'section', desc: 'Pontos de entrada de leads', items: {
+      'pre-diagnostico-pagina': { id: 'pre-diagnostico-pagina', nome: 'Página de pré-diagnóstico', type: 'link', url: 'https://int-kronos.pages.dev/', desc: 'Landing page' },
+      'pre-diagnostico-form': { id: 'pre-diagnostico-form', nome: 'Formulário de pré-diagnóstico', type: 'link', url: 'https://forms.gle/qUMrv7mXbPoD4Ytd6' },
+      'live-quinta': { id: 'live-quinta', nome: 'Live de quinta-feira', type: 'link', url: 'https://paginas.institutokronos.com.br/live-quinta', desc: 'Página da live semanal' },
+      'avatar-kairos': { id: 'avatar-kairos', nome: 'Avatar Kairós — quem qualifica (Doc)', type: 'doc', desc: 'Framework de qualificação. Local: C:\\Users\\bueno\\Downloads\\Documentos\\Avatar Kairós.docx. 3 gates obrigatórios + scoring.' }
+    } },
+    'aplicacao': { id: 'aplicacao', nome: 'Aplicação (só evento)', type: 'section', desc: 'Aplicação APENAS pra evento. Pra mentoria, vai direto pra oferta.', items: {
+      'aplicacao-form-evento': { id: 'aplicacao-form-evento', nome: 'Formulário de aplicação (evento)', type: 'link', url: 'https://forms.gle/qUMrv7mXbPoD4Ytd6', desc: 'Mesmo form de pré-diagnóstico hoje' }
+    } },
+    'checkouts': { id: 'checkouts', nome: 'Checkouts de pagamento', type: 'section', desc: 'Links de pagamento — em migração de Zouti para Asas', items: {
+      'aplicacao-zouti': { id: 'aplicacao-zouti', nome: 'Aplicação/entrada (Zouti)', type: 'link', url: 'https://pay.zouti.com.br/checkout?poi=prod_offer_m86w42a1nayucugvh29ws0' },
+      'a-vista': { id: 'a-vista', nome: 'À vista (Zouti)', type: 'link', url: 'https://pay.zouti.com.br/checkout?product_offer_id=prod_offer_7bs0a37hyb3s6qq2b3ka6o' },
+      'parcelado': { id: 'parcelado', nome: 'Parcelado (Zouti)', type: 'link', url: 'https://pay.zouti.com.br/checkout?product_offer_id=prod_offer_cl7z0m6oaz6axusj4u5jqv' },
+      'contrato-kairos': { id: 'contrato-kairos', nome: 'Contrato Mentoria Kairós (PDF)', type: 'doc', url: 'https://drive.google.com/file/d/1q_0e-iJt4_NIueOv-Ie2hxzB4DbOX7yz/view?usp=sharing', desc: '12 meses · R$10k à vista / R$12k parcelado · Garantia condicional. PDF local: C:\\Users\\bueno\\Downloads\\Documentos\\Contrato - Mentoria Kairós.pdf' }
+    } },
+    'produtos-negociacao': { id: 'produtos-negociacao', nome: 'Produtos e negociação', type: 'doc', url: 'https://docs.google.com/document/d/1D2PB3mtDoua4-iXL2wQ2ONzr4RPPphiU/edit', desc: 'Doc de precificação e regras de oferta' }
   },
-  'biblioteca.fotos-ju':{
-    'galeria-1':{id:'galeria-1',nome:'Galeria 1 — Fotos da Ju',type:'link',url:'https://amarifoto.exposure.com.br/juliana'},
-    'galeria-2':{id:'galeria-2',nome:'Galeria 2 — Fotos da Ju',type:'link',url:'https://amarifoto.exposure.com.br/juliana1'}
+  'operacao.marketing': {
+    'pesquisa-mercado': { id: 'pesquisa-mercado', nome: 'Pesquisa de mercado', type: 'section', desc: 'Raio X do avatar', items: {
+      'raio-x-vende': { id: 'raio-x-vende', nome: 'Raio X – quem já vende', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1nmfC4n7PVmOrPQfMgfqQpjwDIZT93wN3wETQ21yTXYY/edit?gid=1502063929' },
+      'raio-x-nao-vende': { id: 'raio-x-nao-vende', nome: 'Raio X – quem não vende', type: 'sheet', url: 'https://docs.google.com/spreadsheets/d/1oYlderDAgK4MKWHXC9iak44BN_NNbZhCzTw5bqY8G-0/edit?gid=1502063929' }
+    } },
+    'roteiros': { id: 'roteiros', nome: 'Roteiros Kairós', type: 'link', url: 'http://127.0.0.1:8773/downloads/kairos%20central/index.html', desc: 'App de roteiros (local)' },
+    'criativos': { id: 'criativos', nome: 'Criativos — materiais de divulgação', type: 'note', note: 'Banco de criativos e materiais de divulgação.\n\nMateriais:\nhttps://drive.google.com/drive/folders/1TUsyPpPdqeZ-lZ3r6URuW28pjJilPTjs', desc: 'Pasta do Drive com criativos' },
+    'copy': { id: 'copy', nome: 'Copy — textos-base', type: 'note', note: 'Scripts e textos-base.\n\nRoteiros:\nhttps://docs.google.com/document/d/1vwV6hosq4veo5k96AO0OxUwPNBfChqs_DGYKo1hGQvY', desc: 'Roteiros de copy e textos de criativos' }
   }
 };
 
@@ -611,7 +564,7 @@ function clearState(){STATE=JSON.parse(JSON.stringify(INITIAL_DATA));saveState()
 let currentView='home',currentSubScope=null,currentFilter='all',showEmpty=false;
 function buildNav(){const layers=[{key:'home',label:'Visão Geral'},{key:'gestao',label:'Gestão'},{key:'operacao',label:'Operação'},{key:'produtos',label:'Produtos'},{key:'sops',label:'SOPs'},{key:'biblioteca',label:'Biblioteca'},{key:'conhecimento',label:'Conhecimento'}];const html=layers.map(l=>{const ct=l.key==='home'?'':`<span class="ct">${getScopeCount(l.key).filled}/${getScopeCount(l.key).total}</span>`;return `<a href="#" data-nav="${l.key}">${l.label}${ct}</a>`}).join('');document.getElementById('navlinks').innerHTML=html;document.querySelectorAll('.navlinks a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();navigate(a.dataset.nav)})})}
 function getScopeCount(k){const all=collectAllItems(k);return{filled:all.filter(i=>i.type!=='empty').length,total:all.length}}
-function collectAllItems(scopeKey){const out=[];if(scopeKey==='gestao'){ESTRUTURA.gestao.items.forEach(it=>{const s=(STATE.gestao||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}else if(scopeKey==='operacao'){if(!currentSubScope){Object.entries(ESTRUTURA.operacao.areas).forEach(([subKey,sub])=>{out.push({id:'_sub_'+subKey,nome:sub.titulo,type:'subhead',scopeKey,parentId:subKey})});return out}const sub=ESTRUTURA.operacao.areas[currentSubScope];sub.items.forEach(it=>{const fullKey=`operacao.${currentSubScope}`;const s=(STATE[fullKey]||{})[it.id];if(s){if(s.type==='section'&&s.items){out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}else{out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}}else{out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}})}else if(scopeKey==='produtos'){if(!currentSubScope){Object.entries(ESTRUTURA.produtos.items).forEach(([prodKey,prod])=>{out.push({id:'_sub_'+prodKey,nome:prod.titulo,type:'subhead',scopeKey,parentId:prodKey})});return out}const prod=ESTRUTURA.produtos.items[currentSubScope];if(!prod.items||!prod.items.length){out.push({id:'empty-prod',nome:'Slot vazio',type:'empty',scopeKey,parentId:currentSubScope,_isEmpty:true});return out}prod.items.forEach(it=>{const fullKey=`produtos.${currentSubScope}`;const s=(STATE[fullKey]||{})[it.id];if(s){if(s.type==='section'&&s.items){out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}else{out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}}else{out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}})}else if(scopeKey==='sops'){ESTRUTURA.sops.items.forEach(it=>{const s=(STATE.sops||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})});if(!currentSubScope)out.push({id:'_playbook',nome:'Playbook Mentoria Kairós (10 notas)',type:'playbook',scopeKey})}else if(scopeKey==='biblioteca'){ESTRUTURA.biblioteca.items.forEach(it=>{const s=(STATE.biblioteca||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}else if(scopeKey==='conhecimento'){ESTRUTURA.conhecimento.items.forEach(it=>{const s=(STATE.conhecimento||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}return out}
+function collectAllItems(scopeKey){const out=[];if(scopeKey==='gestao'){ESTRUTURA.gestao.items.forEach(it=>{const s=(STATE.gestao||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}else if(scopeKey==='operacao'){if(!currentSubScope){Object.entries(ESTRUTURA.operacao.areas).forEach(([subKey,sub])=>{out.push({id:'_sub_'+subKey,nome:sub.titulo,type:'subhead',scopeKey,parentId:subKey})});return out}const sub=ESTRUTURA.operacao.areas[currentSubScope];sub.items.forEach(it=>{const fullKey=`operacao.${currentSubScope}`;const s=(STATE[fullKey]||{})[it.id];if(s){if(s.type==='section'&&s.items){out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}else{out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}}else{out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome,_subKey:currentSubScope})}})}else if(scopeKey==='produtos'){if(!currentSubScope){Object.entries(ESTRUTURA.produtos.items).forEach(([prodKey,prod])=>{out.push({id:'_sub_'+prodKey,nome:prod.titulo,type:'subhead',scopeKey,parentId:prodKey})});return out}const prod=ESTRUTURA.produtos.items[currentSubScope];if(!prod.items||!prod.items.length){out.push({id:'empty-prod',nome:'Slot vazio',type:'empty',scopeKey,parentId:currentSubScope,_isEmpty:true});return out}prod.items.forEach(it=>{const fullKey=`produtos.${currentSubScope}`;const s=(STATE[fullKey]||{})[it.id];if(s){if(s.type==='section'&&s.items){out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}else{out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}}else{out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome,_prodKey:currentSubScope})}})}else if(scopeKey==='sops'){ESTRUTURA.sops.items.forEach(it=>{const s=(STATE.sops||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}else if(scopeKey==='biblioteca'){ESTRUTURA.biblioteca.items.forEach(it=>{const s=(STATE.biblioteca||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}else if(scopeKey==='conhecimento'){ESTRUTURA.conhecimento.items.forEach(it=>{const s=(STATE.conhecimento||{})[it.id];if(s)out.push({...s,scopeKey,parentId:it.id,_parentName:it.nome});else out.push({id:it.id,nome:it.nome,type:'empty',scopeKey,parentId:it.id,_parentName:it.nome})})}return out}
 function navigate(scopeKey,subKey){if(scopeKey!==currentView)currentSubScope=null;currentView=scopeKey;if(subKey!==undefined)currentSubScope=subKey;document.querySelectorAll('.navlinks a').forEach(a=>{a.classList.toggle('active',a.dataset.nav===scopeKey)});if(scopeKey==='home')renderHome();else renderScope();window.scrollTo({top:0,behavior:'smooth'})}
 
 // === RENDER HOME (BENTO) ===
@@ -691,7 +644,7 @@ function renderScope(){
   if(currentView==='sops'&&!currentSubScope){
     const items=collectAllItems('sops').filter(i=>i.type!=='playbook');
     html+=renderScopeContent('sops',items);
-    html+=`<h2 style="margin-top:64px;font-size:24px;font-weight:600;letter-spacing:-.015em;color:var(--text)"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pink);letter-spacing:.1em">//</span> Playbook Mentoria Kairós <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pink);background:var(--pink-soft);padding:2px 8px;border-radius:10px;letter-spacing:.04em;font-weight:500">10 notas</span></h2><div class="bento-items">${Object.entries(PLAYBOOK).map(([key,p],i)=>`<div class="note-card" data-playbook="${key}"><div class="note-card-head"><div class="note-card-num">${String(i+1).padStart(2,'0')}</div><div class="note-card-title">${p.titulo}</div><div class="note-card-type">◆ NOTA</div></div><div class="note-card-body">${(p.conteudo||'').substring(0,200).replace(/\n/g,' ')}…</div></div>`).join('')}</div>`;
+    html+=`<h2 style="margin-top:64px;font-size:24px;font-weight:600;letter-spacing:-.015em;color:var(--text)"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pink);letter-spacing:.1em">//</span> Playbook Mentoria Kairós <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pink);background:var(--pink-soft);padding:2px 8px;border-radius:10px;letter-spacing:.04em;font-weight:500">10 notas</span></h2><div class="bento-items">''</div>`;
   } else {
     const items=collectAllItems(currentView);
     html+=renderScopeContent(currentView,items);
@@ -701,7 +654,7 @@ function renderScope(){
   document.querySelectorAll('.subtab').forEach(t=>{t.addEventListener('click',()=>{navigate(currentView,t.dataset.sub)})});
   document.querySelectorAll('[data-subnav]').forEach(el=>{el.addEventListener('click',e=>{e.preventDefault();navigate(currentView,el.dataset.subnav)})});
   bindItemActions();
-  document.querySelectorAll('[data-playbook]').forEach(el=>{el.addEventListener('click',()=>openPlaybookNote(el.dataset.playbook))});
+  
 }
 function renderScopeContent(scopeKey,items){
   const filtered=items.filter(it=>{if(currentFilter==='empty')return it.type==='empty';if(it.type==='empty')return showEmpty;if(currentFilter==='all')return true;return it.type===currentFilter});
@@ -783,9 +736,8 @@ document.getElementById('ae-cancel').addEventListener('click',closeModal);
 document.getElementById('ae-save').addEventListener('click',saveAddEdit);
 document.querySelectorAll('.type-pill').forEach(p=>p.addEventListener('click',()=>setAeType(p.dataset.type)));
 
-// === NOTE + PLAYBOOK ===
+// === NOTE ===
 function openNoteView(scopeKey,itemId,parentId){let item=null;if(parentId){const parent=(STATE[scopeKey]||{})[parentId];if(parent&&parent.items)item=parent.items[itemId]}else{item=(STATE[scopeKey]||{})[itemId]}if(!item||!item.note)return;const m=document.createElement('div');m.className='modal-backdrop open';m.innerHTML=`<div class="modal" style="max-width:780px" onclick="event.stopPropagation()"><h2>${item.nome}</h2><div class="sub">// ${scopeKey} · ${itemId}</div><div class="note-card-body" style="max-height:60vh;overflow-y:auto">${formatNoteBody(item.note)}</div><div class="actions"><button class="cancel" onclick="this.closest('.modal-backdrop').remove()">Fechar</button></div></div>`;m.addEventListener('click',()=>m.remove());document.body.appendChild(m)}
-function openPlaybookNote(key){const p=PLAYBOOK[key];if(!p)return;const m=document.createElement('div');m.className='modal-backdrop open';m.innerHTML=`<div class="modal" style="max-width:780px" onclick="event.stopPropagation()"><h2>${p.titulo}</h2><div class="sub">// Playbook Mentoria Kairós</div><div class="note-card-body" style="max-height:65vh;overflow-y:auto">${formatNoteBody(p.conteudo)}</div><div class="actions"><button class="cancel" onclick="this.closest('.modal-backdrop').remove()">Fechar</button></div></div>`;m.addEventListener('click',()=>m.remove());document.body.appendChild(m)}
 function openAbout(){document.getElementById('modal-about').classList.add('open')}
 function closeAbout(){document.getElementById('modal-about').classList.remove('open')}
 document.getElementById('modal-about').addEventListener('click',e=>{if(e.target.id==='modal-about')closeAbout()});
@@ -797,9 +749,9 @@ function tokenizeStem(s){if(!s)return[];return s.toLowerCase().split(/\W+/).filt
 let searchResults=[],searchSelected=0;
 function runSearch(q){const results=[];const qStems=tokenizeStem(q);if(!qStems.length)return results;const expandedStems=new Set(qStems);qStems.forEach(s=>{if(SYNONYMS[s])SYNONYMS[s].split(/\s+/).forEach(x=>expandedStems.add(stem(x))) });
 function scoreItem(text){const tokens=tokenizeStem(text);let s=0;for(const q of expandedStems){if(tokens.some(t=>t===q||t.startsWith(q)||q.startsWith(t)))s+=2;else if(tokens.some(t=>t.includes(q)))s+=1}return s}
-Object.entries(STATE).forEach(([scopeKey,scope])=>{Object.entries(scope).forEach(([itemId,item])=>{if(!item||!item.nome)return;let path=scopeKey;if(scopeKey.startsWith('operacao.')||scopeKey.startsWith('produtos.')){path=scopeKey.replace('.',' › ')}const text=[item.nome,item.desc||'',item.note||'',item.url||''].join(' ');const sc=scoreItem(text);if(sc>0){results.push({...item,scope:scopeKey,_path:path,_score:sc})}else if(item.type==='section'&&item.items){Object.values(item.items).forEach(sub=>{if(!sub)return;const stext=[sub.nome,sub.desc||'',sub.note||'',sub.url||''].join(' ');const ssc=scoreItem(stext);if(ssc>0)results.push({...sub,scope:scopeKey,_path:path+' › '+item.nome,_score:ssc})})}})});Object.entries(PLAYBOOK).forEach(([key,p])=>{const text=[p.titulo,p.conteudo||''].join(' ');const sc=scoreItem(text);if(sc>0)results.push({id:'_pb_'+key,nome:p.titulo,type:'playbook',_path:'Playbook Kairós',_score:sc})});Object.entries(ESTRUTURA).forEach(([scopeKey,scope])=>{if(scope.titulo){const sc=scoreItem(scope.titulo+' '+(scope.descricao||''));if(sc>0)results.push({id:'_nav_'+scopeKey,nome:scope.titulo,type:'nav',_path:'Ir para camada',_score:sc+0.5})}if(scope.areas){Object.entries(scope.areas).forEach(([subK,sub])=>{const sc=scoreItem(sub.titulo);if(sc>0)results.push({id:'_nav_'+scopeKey+'_'+subK,nome:sub.titulo,type:'nav',_path:'Operação › '+sub.titulo,_score:sc+0.3})})}if(scope.items&&scope.items.titulo===undefined){Object.entries(scope.items).forEach(([prodK,prod])=>{const sc=scoreItem(prod.titulo);if(sc>0)results.push({id:'_nav_'+scopeKey+'_'+prodK,nome:prod.titulo,type:'nav',_path:'Produtos › '+prod.titulo,_score:sc+0.3})})}});results.sort((a,b)=>b._score-a._score);return results.slice(0,12)}
+Object.entries(STATE).forEach(([scopeKey,scope])=>{Object.entries(scope).forEach(([itemId,item])=>{if(!item||!item.nome)return;let path=scopeKey;if(scopeKey.startsWith('operacao.')||scopeKey.startsWith('produtos.')){path=scopeKey.replace('.',' › ')}const text=[item.nome,item.desc||'',item.note||'',item.url||''].join(' ');const sc=scoreItem(text);if(sc>0){results.push({...item,scope:scopeKey,_path:path,_score:sc})}else if(item.type==='section'&&item.items){Object.values(item.items).forEach(sub=>{if(!sub)return;const stext=[sub.nome,sub.desc||'',sub.note||'',sub.url||''].join(' ');const ssc=scoreItem(stext);if(ssc>0)results.push({...sub,scope:scopeKey,_path:path+' › '+item.nome,_score:ssc})})}})});/* removed */results.sort((a,b)=>b._score-a._score);return results.slice(0,12)}
 function renderSearchResults(results){const box=document.getElementById('search-results');if(!results.length){box.innerHTML=`<div class="sr-empty">Nada encontrado</div>`;return}box.innerHTML=results.map((r,i)=>{const iconMap={note:'◆',link:'↗',sheet:'⊞',doc:'▤',section:'▾',playbook:'◆',nav:'→'};const cls=r.type==='playbook'?'note':r.type;return `<div class="sr-item ${i===searchSelected?'selected':''}" data-idx="${i}"><div class="sr-icon ${cls}">${iconMap[r.type]||'·'}</div><div class="sr-body"><div class="sr-name">${r.nome}</div><div class="sr-path">${r._path||''}</div></div><div class="sr-type">${r.type}</div></div>`}).join('');box.querySelectorAll('.sr-item').forEach(el=>{el.addEventListener('click',()=>{const idx=parseInt(el.dataset.idx);openSearchResult(results[idx])});el.addEventListener('mouseenter',()=>{searchSelected=parseInt(el.dataset.idx);box.querySelectorAll('.sr-item').forEach(e=>e.classList.toggle('selected',parseInt(e.dataset.idx)===searchSelected))})})}
-function openSearchResult(r){document.getElementById('search-results').classList.remove('open');document.getElementById('search-input').value='';if(r.type==='nav'){if(r.id.startsWith('_nav_home'))navigate('home');else if(r.id.startsWith('_nav_operacao_')){navigate('operacao',r.id.replace('_nav_operacao_',''))}else if(r.id.startsWith('_nav_produtos_')){navigate('produtos',r.id.replace('_nav_produtos_',''))}else navigate(r.id.replace('_nav_',''));return}if(r.type==='playbook'){openPlaybookNote(r.id.replace('_pb_',''));return}const scope=r.scope||'';if(scope.startsWith('operacao.')){navigate('operacao',scope.split('.')[1])}else if(scope.startsWith('produtos.')){navigate('produtos',scope.split('.')[1])}else{navigate(scope)}setTimeout(()=>{if(r.type==='note')openNoteView(scope,r.id)},100)}
+function openSearchResult(r){document.getElementById('search-results').classList.remove('open');document.getElementById('search-input').value='';if(r.type==='nav'){if(r.id.startsWith('_nav_home'))navigate('home');else if(r.id.startsWith('_nav_operacao_')){navigate('operacao',r.id.replace('_nav_operacao_',''))}else if(r.id.startsWith('_nav_produtos_')){navigate('produtos',r.id.replace('_nav_produtos_',''))}else navigate(r.id.replace('_nav_',''));return}if(r.type==='playbook'){return}const scope=r.scope||'';if(scope.startsWith('operacao.')){navigate('operacao',scope.split('.')[1])}else if(scope.startsWith('produtos.')){navigate('produtos',scope.split('.')[1])}else{navigate(scope)}setTimeout(()=>{if(r.type==='note')openNoteView(scope,r.id)},100)}
 document.getElementById('search-input').addEventListener('input',e=>{const q=e.target.value;const box=document.getElementById('search-results');if(!q||q.length<2){box.classList.remove('open');box.innerHTML='';return}searchResults=runSearch(q);searchSelected=0;renderSearchResults(searchResults);box.classList.add('open')});
 document.getElementById('search-input').addEventListener('focus',e=>{if(e.target.value.length>=2)document.getElementById('search-results').classList.add('open')});
 document.getElementById('search-input').addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('search-results').classList.remove('open');document.getElementById('search-input').blur()}if(e.key==='ArrowDown'){e.preventDefault();searchSelected=Math.min(searchSelected+1,searchResults.length-1);renderSearchResults(searchResults)}if(e.key==='ArrowUp'){e.preventDefault();searchSelected=Math.max(searchSelected-1,0);renderSearchResults(searchResults)}if(e.key==='Enter'&&searchResults.length){e.preventDefault();openSearchResult(searchResults[searchSelected])}});
@@ -807,7 +759,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search-box'))docume
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();document.getElementById('search-input').focus()}});
 
 // === RESUMO ===
-function buildResumo(){const out=[];out.push('## Gestão');ESTRUTURA.gestao.items.forEach(it=>{const s=(STATE.gestao||{})[it.id];out.push(buildResumoItem('Gestão > '+it.nome,s))});out.push('\n## Operação');Object.entries(ESTRUTURA.operacao.areas).forEach(([subK,sub])=>{out.push('\n### '+sub.titulo);sub.items.forEach(it=>{const s=(STATE['operacao.'+subK]||{})[it.id];out.push(buildResumoItem(sub.titulo+' > '+it.nome,s))})});out.push('\n## Produtos');Object.entries(ESTRUTURA.produtos.items).forEach(([prodK,prod])=>{out.push('\n### '+prod.titulo);(prod.items||[]).forEach(it=>{const s=(STATE['produtos.'+prodK]||{})[it.id];out.push(buildResumoItem(prod.titulo+' > '+it.nome,s))})});out.push('\n## SOPs');ESTRUTURA.sops.items.forEach(it=>{const s=(STATE.sops||{})[it.id];out.push(buildResumoItem('SOP > '+it.nome,s))});out.push('\n## Biblioteca');ESTRUTURA.biblioteca.items.forEach(it=>{const s=(STATE.biblioteca||{})[it.id];out.push(buildResumoItem('Biblioteca > '+it.nome,s))});out.push('\n## Conhecimento');ESTRUTURA.conhecimento.items.forEach(it=>{const s=(STATE.conhecimento||{})[it.id];out.push(buildResumoItem('Conhecimento > '+it.nome,s))});out.push('\n## Playbook Mentoria Kairós');Object.entries(PLAYBOOK).forEach(([k,p])=>{out.push(`\n### ${p.titulo}`);out.push('_(nota interna no painel)_')});return out.join('\n')}
+function buildResumo(){const out=[];out.push('## Gestão');ESTRUTURA.gestao.items.forEach(it=>{const s=(STATE.gestao||{})[it.id];out.push(buildResumoItem('Gestão > '+it.nome,s))});out.push('\n## Operação');Object.entries(ESTRUTURA.operacao.areas).forEach(([subK,sub])=>{out.push('\n### '+sub.titulo);sub.items.forEach(it=>{const s=(STATE['operacao.'+subK]||{})[it.id];out.push(buildResumoItem(sub.titulo+' > '+it.nome,s))})});out.push('\n## Produtos');Object.entries(ESTRUTURA.produtos.items).forEach(([prodK,prod])=>{out.push('\n### '+prod.titulo);(prod.items||[]).forEach(it=>{const s=(STATE['produtos.'+prodK]||{})[it.id];out.push(buildResumoItem(prod.titulo+' > '+it.nome,s))})});out.push('\n## SOPs');ESTRUTURA.sops.items.forEach(it=>{const s=(STATE.sops||{})[it.id];out.push(buildResumoItem('SOP > '+it.nome,s))});out.push('\n## Biblioteca');ESTRUTURA.biblioteca.items.forEach(it=>{const s=(STATE.biblioteca||{})[it.id];out.push(buildResumoItem('Biblioteca > '+it.nome,s))});out.push('\n## Conhecimento');ESTRUTURA.conhecimento.items.forEach(it=>{const s=(STATE.conhecimento||{})[it.id];out.push(buildResumoItem('Conhecimento > '+it.nome,s))});return out.join('\n')}
 function buildResumoItem(path,item){if(!item)return `- _(vazio)_ **${path}**`;if(item.type==='note')return `- ◆ **${item.nome||path}** _(nota)_ — ${path}`;if(item.type==='section'){let sub='';if(item.items){Object.values(item.items).forEach(c=>{sub+='\n  '+buildResumoItem(path+' > '+(c.nome||''),c)})}return `- ▾ **${item.nome||path}** _(seção)_ — ${path}${sub}`}const typeIcon={link:'↗',sheet:'⊞',doc:'▤',video:'▶',image:'◆'}[item.type]||'·';const url=item.url||(item.note&&(item.note.match(/https?:\/\/\S+/)||[])[0]);const urlTxt=url?` → ${url}`:'';return `- ${typeIcon} **${item.nome||path}** _(${item.type})_ — ${path}${urlTxt}`}
 function renderResumo(filter){const content=document.getElementById('resumo-content');const text=buildResumo();const lines=text.split('\n');const filtered=filter?lines.filter(l=>l.toLowerCase().includes(filter.toLowerCase())):lines;let html=filtered.map(l=>{if(l.startsWith('## '))return `<h3 style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text);margin:20px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">${escapeHtml(l.slice(3))}</h3>`;if(l.startsWith('### '))return `<h4 style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin:14px 0 6px;font-weight:600">${escapeHtml(l.slice(4))}</h4>`;if(l.startsWith('  '))return `<div style="font-size:12px;color:var(--text-dim);padding:2px 0 2px 24px;line-height:1.5">${formatResumoLine(l.trim())}</div>`;if(l.trim()==='')return '<div style="height:8px"></div>';return `<div style="font-size:13px;color:var(--text);padding:4px 0;line-height:1.55">${formatResumoLine(l)}</div>`}).join('');content.innerHTML=html}
 function formatResumoLine(l){return escapeHtml(l).replace(/\*\*(.+?)\*\*/g,'<b style="color:var(--text);font-weight:600">$1</b>').replace(/_(.+?)_/g,'<span style="color:var(--text-faint);font-style:italic;font-family:\'IBM Plex Mono\',monospace;font-size:11px">$1</span>').replace(/→\s*(https?:\/\/[^\s]+)/g,'→ <a href="$1" target="_blank" style="color:var(--blue);font-family:\'IBM Plex Mono\',monospace;font-size:11px;text-decoration:none;border-bottom:1px solid rgba(96,165,250,.3);word-break:break-all">$1</a>').replace(/_(vazio)_/g,'<span style="color:var(--text-faint);font-style:italic">vazio</span>')}
